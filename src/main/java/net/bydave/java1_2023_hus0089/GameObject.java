@@ -10,5 +10,5 @@ public interface GameObject {
     // x, y, -width, -height
     float[] getCollider();
 
-    void notifyKeyPressed(KeyEvent ev);
+    default void notifyKeyPressed(KeyEvent ev) {}
 }

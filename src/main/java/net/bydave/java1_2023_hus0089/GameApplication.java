@@ -17,8 +17,7 @@ public class GameApplication extends Application {
         fxmlLoader.setController(new GameController());
         BorderPane root = fxmlLoader.load();
         Scene scene = new Scene(root);
-        //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Game");
         stage.setScene(scene);
         stage.show();
 

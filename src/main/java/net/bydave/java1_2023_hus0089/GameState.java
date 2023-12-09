@@ -18,7 +18,9 @@ public class GameState {
 
     private List<GameObject> objects = new LinkedList<>();
 
-    GameState() {}
+    GameState() {
+        enemies.add(new Enemy());
+    }
 
     void update(long delta) {
         // is it possible to do the same thing with streams?

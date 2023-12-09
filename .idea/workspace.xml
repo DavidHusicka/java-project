@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add canvas with a player">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/net/bydave/java1_2023_hus0089/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/net/bydave/java1_2023_hus0089/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DavidHusicka"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ae3c8c57-736c-42a4-a6f2-17e45cee45b9" />
+        <option name="url" value="git@github.com:DavidHusicka/java-project.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -74,8 +85,17 @@
       <workItem from="1700822471235" duration="3000000" />
       <workItem from="1700843733538" duration="932000" />
       <workItem from="1700940802137" duration="14000" />
-      <workItem from="1702139892886" duration="12549000" />
+      <workItem from="1702139892886" duration="16718000" />
     </task>
+    <task id="LOCAL-00001" summary="Add canvas with a player">
+      <option name="closed" value="true" />
+      <created>1702158323902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702158323902</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,5 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add canvas with a player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add canvas with a player" />
   </component>
 </project>

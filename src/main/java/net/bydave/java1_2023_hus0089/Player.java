@@ -1,10 +1,15 @@
 package net.bydave.java1_2023_hus0089;
 
+import javafx.geometry.Rectangle2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
 
 public class Player implements GameObject {
     float x = (250 - 64) / (float)2;
@@ -38,6 +43,20 @@ public class Player implements GameObject {
         }
         if (this.y > state.sceneSizeY - sizeY) {
             this.y = state.sceneSizeY - sizeY;
+        }
+
+        List<GameObject> collisionChecked = new LinkedList<>();
+        collisionChecked.addAll(state.enemies);
+        collisionChecked.addAll(state.enemyBullets);
+
+        for (GameObject o : collisionChecked) {
+            float[] collider = o.getCollider();
+            float[] colliderSelf = this.getCollider();
+            Rectangle2D colliderShape = new Rectangle2D(collider[0], collider[1], collider[2], collider[3]);
+            Rectangle2D colliderSelfShape = new Rectangle2D(colliderSelf[0], colliderSelf[1], colliderSelf[2], colliderSelf[3]);
+            if (colliderShape.intersects(colliderSelfShape)) {
+                System.out.println("got hit");
+            }
         }
     }
 
