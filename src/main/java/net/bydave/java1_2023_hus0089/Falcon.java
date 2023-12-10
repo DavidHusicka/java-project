@@ -1,8 +1,10 @@
 package net.bydave.java1_2023_hus0089;
 
+import javafx.scene.image.Image;
+
 public class Falcon extends Enemy {
     Falcon() {
-        super(new FalconMovement());
+        super(new FalconMovement(), "Falcon.gif");
     }
 
     @Override

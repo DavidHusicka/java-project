@@ -6,7 +6,7 @@ public class FalconMovement implements MovementFunction {
     public float[] move() {
         tickCounter++;
         return switch ((tickCounter/25) % 4) {
-            case 0 -> new float[]{0, 8.1f};
+            case 0 -> new float[]{0, 8.5f};
             case 1 -> new float[]{8, 0};
             case 2 -> new float[]{0, -8};
             case 3 -> new float[]{-8, 0};

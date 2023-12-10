@@ -15,9 +15,9 @@ public class Enemy implements GameObject {
     int tickCounter = 0;
     Image sprite;
     MovementFunction movePattern;
-    Enemy(MovementFunction movePattern){
+    Enemy(MovementFunction movePattern, String sprite){
         this.movePattern = movePattern;
-        this.sprite = new Image(getClass().getResourceAsStream("Falcon.gif"));
+        this.sprite = new Image(getClass().getResourceAsStream(sprite));
     }
 
     @Override

@@ -24,13 +24,19 @@ public class GameState {
     public boolean isFireDown = false;
     public boolean isBombDown = false;
 
+    int tickCounter = 1;
+
     private List<GameObject> objects = new LinkedList<>();
 
     GameState() {
-        enemies.add(new Falcon());
+        this.enemies.add(new Raccoon());
     }
 
     void update(long delta) {
+        if (tickCounter % 250 == 0) {
+            enemies.add(new Falcon());
+        }
+
         // is it possible to do the same thing with streams?
         // it's possible with iterators in rust for sure
         objects.clear();
@@ -42,6 +48,7 @@ public class GameState {
         for (GameObject o : objects) {
             o.update(delta, this);
         }
+        tickCounter++;
     }
 
     // requires update first before calling draw

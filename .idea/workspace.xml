@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add canvas with a player">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Falcon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/FalconMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/MovementFunction.java" afterDir="false" />
+    <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add more game logic">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Raccoon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/RaccoonMovement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Falcon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Falcon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/FalconMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/FalconMovement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702158323902</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add more game logic">
+      <option name="closed" value="true" />
+      <created>1702210020857</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702210020857</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add canvas with a player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add canvas with a player" />
+    <MESSAGE value="Add more game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more game logic" />
   </component>
 </project>
