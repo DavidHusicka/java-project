@@ -15,9 +15,8 @@ public class Player implements GameObject {
     float x = (250 - 64) / (float)2;
     float y = 400;
 
-    float yDirection = 0;
-    float xDirection = 0;
     boolean isShiftDown = false;
+    int tickCounter = 0;
 
     float sizeX = 64;
     float sizeY = 64;
@@ -29,6 +28,21 @@ public class Player implements GameObject {
 
     @Override
     public void update(long delta, GameState state) {
+        float yDirection = 0;
+        float xDirection = 0;
+        this.isShiftDown = state.isShiftDown;
+        if (state.isUpDown) {
+            yDirection = -getMovementSpeed();
+        }
+        if (state.isDownDown) {
+            yDirection = getMovementSpeed();
+        }
+        if (state.isRightDown) {
+            xDirection = getMovementSpeed();
+        }
+        if (state.isLeftDown) {
+            xDirection = -getMovementSpeed();
+        }
         this.x += xDirection;
         this.y += yDirection;
 
@@ -50,14 +64,15 @@ public class Player implements GameObject {
         collisionChecked.addAll(state.enemyBullets);
 
         for (GameObject o : collisionChecked) {
-            float[] collider = o.getCollider();
-            float[] colliderSelf = this.getCollider();
-            Rectangle2D colliderShape = new Rectangle2D(collider[0], collider[1], collider[2], collider[3]);
-            Rectangle2D colliderSelfShape = new Rectangle2D(colliderSelf[0], colliderSelf[1], colliderSelf[2], colliderSelf[3]);
-            if (colliderShape.intersects(colliderSelfShape)) {
+            if (o.getColliderAsRectangle().intersects(this.getColliderAsRectangle())) {
                 System.out.println("got hit");
             }
         }
+
+        if (tickCounter % 8 == 0 && state.isFireDown) {
+            state.playerBullets.add(new Bullet(x + this.sizeX / 2, y + 8, 0, -16));
+        }
+        tickCounter++;
     }
 
     @Override
@@ -74,42 +89,9 @@ public class Player implements GameObject {
     public float[] getCollider() {
         float x = this.x + 64 / (float)2 - 7;
         float y = this.y + 64 / (float)2 - 2;
-        return new float[]{ x, y, x + 14, y + 14};
+        return new float[]{ x, y, 14, 14};
     }
 
-    @Override
-    public void notifyKeyPressed(KeyEvent ev) {
-        KeyCode code = ev.getCode();
-        if (ev.getEventType() == KeyEvent.KEY_PRESSED) {
-            switch (code) {
-                case RIGHT:
-                    xDirection = getMovementSpeed();
-                    break;
-                case LEFT:
-                    xDirection = -getMovementSpeed();
-                    break;
-                case UP:
-                    yDirection = -getMovementSpeed();
-                    break;
-                case DOWN:
-                    yDirection = getMovementSpeed();
-                    break;
-            }
-        }
-        else {
-            switch (code) {
-                case RIGHT:
-                case LEFT:
-                    xDirection = 0;
-                    break;
-                case UP:
-                case DOWN:
-                    yDirection = 0;
-                    break;
-            }
-        }
-        this.isShiftDown = ev.isShiftDown();
-    }
 
     float getMovementSpeed() {
         if (isShiftDown) {

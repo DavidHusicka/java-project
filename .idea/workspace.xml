@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add canvas with a player">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Falcon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/FalconMovement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/MovementFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" afterDir="false" />
@@ -28,12 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DavidHusicka"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DavidHusicka&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>

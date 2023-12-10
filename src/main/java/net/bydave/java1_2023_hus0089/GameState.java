@@ -16,20 +16,28 @@ public class GameState {
     public float sceneSizeX = 250;
     public float sceneSizeY = 400;
 
+    public boolean isRightDown = false;
+    public boolean isLeftDown = false;
+    public boolean isDownDown = false;
+    public boolean isUpDown = false;
+    public boolean isShiftDown = false;
+    public boolean isFireDown = false;
+    public boolean isBombDown = false;
+
     private List<GameObject> objects = new LinkedList<>();
 
     GameState() {
-        enemies.add(new Enemy());
+        enemies.add(new Falcon());
     }
 
     void update(long delta) {
         // is it possible to do the same thing with streams?
         // it's possible with iterators in rust for sure
         objects.clear();
+        objects.add(player);
         objects.addAll(enemies);
         objects.addAll(enemyBullets);
         objects.addAll(playerBullets);
-        objects.add(player);
 
         for (GameObject o : objects) {
             o.update(delta, this);
