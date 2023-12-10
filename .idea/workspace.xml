@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add enemy type">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameStateChangedListener.java" afterDir="false" />
+    <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add bombs and ui logic">
+      <change afterPath="$PROJECT_DIR$/scores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/DrawingThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702211352856</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add bombs and ui logic">
+      <option name="closed" value="true" />
+      <created>1702222777783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702222777783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +130,7 @@
     <MESSAGE value="Add canvas with a player" />
     <MESSAGE value="Add more game logic" />
     <MESSAGE value="Add enemy type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add enemy type" />
+    <MESSAGE value="Add bombs and ui logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bombs and ui logic" />
   </component>
 </project>

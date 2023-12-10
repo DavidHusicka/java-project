@@ -7,6 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
@@ -114,7 +118,12 @@ public class GameController {
 
         @Override
         public void gameEnded() {
-
+            try (PrintWriter pw = new PrintWriter(new FileWriter("scores.txt", true))) {
+                pw.println(scoreLabel.getText());
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

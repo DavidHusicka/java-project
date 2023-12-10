@@ -60,9 +60,6 @@ public class GameState {
     public void setLives(int s) {
         this.lives=s;
         this.listener.stateChanged(score, lives, bombs);
-        if (s >= 0) {
-            this.listener.gameEnded();
-        }
     }
 
     public void setBombs(int s) {
@@ -96,6 +93,10 @@ public class GameState {
             this.enemies.clear();
             this.enemyBullets.clear();
             this.lastBomb = tickCounter;
+        }
+
+        if (this.lives <= 0) {
+            this.listener.gameEnded();
         }
         tickCounter++;
     }
