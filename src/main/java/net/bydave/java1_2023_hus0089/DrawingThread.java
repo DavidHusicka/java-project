@@ -24,11 +24,14 @@ public class DrawingThread extends AnimationTimer {
 
     @Override
     public void handle(long l) {
+        /*
         try {
-            Thread.sleep(16);
+           Thread.sleep(16 - l);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+         */
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         gc.setFill(new Color(1,1,1, 1));
         gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());

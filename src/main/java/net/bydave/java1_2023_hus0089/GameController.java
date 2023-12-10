@@ -2,10 +2,14 @@ package net.bydave.java1_2023_hus0089;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -41,16 +45,34 @@ public class GameController {
     private Label bombsLabel;
 
     private AnimationTimer animationTimer;
+    private final Stage stage;
     //private DrawingThread animationTimer;
 
 
-    GameController() {
+    GameController(Stage stage) {
+        this.stage = stage;
     }
 
     public void startGame() {
         this.state = new GameState(new GameStateChangedListenerImpl());
         this.animationTimer = new DrawingThread(gameCanvas, state);
         this.animationTimer.start();
+    }
+
+    @FXML
+    void menuPressed() {
+        FXMLLoader fxmlLoader = new FXMLLoader(GameController.class.getResource("menu-view.fxml"));
+        try {
+            fxmlLoader.setController(new MenuController(stage));
+            BorderPane root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("want menu");
     }
 
     public void notifyKeyPressed(KeyEvent ev) {

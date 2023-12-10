@@ -13,18 +13,20 @@ public class GameApplication extends Application {
     private GameController controller;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view.fxml"));
-        fxmlLoader.setController(new GameController());
+        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("menu-view.fxml"));
+        fxmlLoader.setController(new MenuController(stage));
         BorderPane root = fxmlLoader.load();
         Scene scene = new Scene(root);
         stage.setTitle("Game");
         stage.setScene(scene);
         stage.show();
 
+        /*
         controller = fxmlLoader.getController();
         controller.startGame();
-        scene.setOnKeyPressed((ev) -> {controller.notifyKeyPressed(ev);});
-        scene.setOnKeyReleased((ev) -> {controller.notifyKeyPressed(ev);});
+        scene.setOnKeyPressed(controller::notifyKeyPressed);
+        scene.setOnKeyReleased(controller::notifyKeyPressed);
+         */
     }
 
     public static void main(String[] args) {
