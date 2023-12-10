@@ -13,4 +13,9 @@ public class FalconMovement implements MovementFunction {
             default -> new float[]{0, 0};
         };
     }
+
+    FalconMovement() {}
+    FalconMovement(int tickCounter) {
+        this.tickCounter = tickCounter;
+    }
 }

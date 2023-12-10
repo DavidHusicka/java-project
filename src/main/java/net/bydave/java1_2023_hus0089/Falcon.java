@@ -6,6 +6,10 @@ public class Falcon extends Enemy {
     Falcon() {
         super(new FalconMovement(), "Falcon.gif");
     }
+    Falcon(int tick) {
+        super(new FalconMovement(tick), "Falcon.gif");
+        this.x = 190;
+    }
 
     @Override
     public void update(long delta, GameState state) {

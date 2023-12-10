@@ -75,6 +75,10 @@ public class Player implements GameObject {
 
         if (tickCounter % 8 == 0 && state.isFireDown) {
             state.playerBullets.add(new Bullet(x + this.sizeX / 2, y + 8, 0, -16));
+            if (state.getScore() > 1000)
+                state.playerBullets.add(new Bullet(x + this.sizeX - 8, y + 8, 0, -16));
+            if (state.getScore() > 2000)
+                state.playerBullets.add(new Bullet(x + 8, y + 8, 0, -16));
         }
         tickCounter++;
     }

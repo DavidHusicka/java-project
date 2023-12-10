@@ -7,6 +7,10 @@ public class Raccoon extends Enemy {
         super(new RaccoonMovement(), "Raccoon.gif");
     }
 
+    Raccoon(int tick) {
+        super(new RaccoonMovement(tick), "Raccoon.gif");
+        this.x = 190;
+    }
     @Override
     public void update(long delta, GameState state) {
         super.update(delta, state);
@@ -18,9 +22,9 @@ public class Raccoon extends Enemy {
             px -= x;
             py -= y;
             float direction = px / py;
-            state.enemyBullets.add(new Bullet(x + 16, y + 16, 3*direction, 3));
-            state.enemyBullets.add(new Bullet(x + 0, y + 16, 3*direction, 3));
-            state.enemyBullets.add(new Bullet(x + 32, y + 16, 3*direction, 3));
+            state.enemyBullets.add(new Bullet(x + 16, y + 16, 5*direction, 5));
+            state.enemyBullets.add(new Bullet(x + 0, y + 16, 5*direction, 5));
+            state.enemyBullets.add(new Bullet(x + 32, y + 16, 5*direction, 5));
         }
     }
 }

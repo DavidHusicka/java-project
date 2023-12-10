@@ -1,7 +1,7 @@
 package net.bydave.java1_2023_hus0089;
 
 public class RaccoonMovement implements MovementFunction{
-    int tickCounter = 0;
+    int tickCounter = -1;
     @Override
     public float[] move() {
         tickCounter++;
@@ -12,5 +12,11 @@ public class RaccoonMovement implements MovementFunction{
             case 3 -> new float[]{-2, 0};
             default -> new float[]{0, 0};
         };
+    }
+
+    RaccoonMovement() {}
+
+    RaccoonMovement(int tickCounter) {
+        this.tickCounter = tickCounter;
     }
 }

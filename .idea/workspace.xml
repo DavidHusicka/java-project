@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0a9993de-1c0d-4132-ac6d-47b90e3777b7" name="Changes" comment="Add menu scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/net/bydave/java1_2023_hus0089/menu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/net/bydave/java1_2023_hus0089/menu-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Falcon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Falcon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/FalconMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/FalconMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Raccoon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/Raccoon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/RaccoonMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/bydave/java1_2023_hus0089/RaccoonMovement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +68,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editor.preferences.appearance",
     "vue.rearranger.settings.migration": "true"
   }

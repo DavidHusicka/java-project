@@ -12,7 +12,7 @@ public class Enemy implements GameObject {
     float sizeX = 64;
     float sizeY = 64;
 
-    int tickCounter = 0;
+    int tickCounter = -1;
     Image sprite;
     MovementFunction movePattern;
     Enemy(MovementFunction movePattern, String sprite){

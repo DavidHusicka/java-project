@@ -5,6 +5,7 @@ import javafx.scene.paint.Color;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 import java.util.Vector;
 
 public class GameState {
@@ -34,10 +35,12 @@ public class GameState {
     private final List<GameObject> objects = new LinkedList<>();
 
     private final GameStateChangedListener listener;
+    private final Random random;
 
     GameState(GameStateChangedListener listener) {
         this.enemies.add(new Raccoon());
         this.listener = listener;
+        this.random = new Random();
     }
 
     public int getScore() {
@@ -71,8 +74,22 @@ public class GameState {
         if (lives <= 0) {
             return;
         }
-        if (tickCounter % 250 == 0) {
-            enemies.add(new Falcon());
+        if (tickCounter % (250 - tickCounter / 600) == 0) {
+            switch (random.nextInt(4) % 4) {
+                case 0:
+                    enemies.add(new Falcon());
+                    break;
+                case 1:
+                    enemies.add(new Raccoon());
+                    break;
+                case 2:
+                    enemies.add(new Falcon(25*3));
+                    break;
+                case 3:
+                    enemies.add(new Raccoon(180));
+                    break;
+            }
+            //enemies.add(new Falcon());
         }
 
         // is it possible to do the same thing with streams?
