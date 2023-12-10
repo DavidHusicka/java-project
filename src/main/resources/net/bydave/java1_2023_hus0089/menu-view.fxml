@@ -10,6 +10,6 @@
       <Button mnemonicParsing="false" text="Start" BorderPane.alignment="CENTER" onAction="#gameStart"/>
    </center>
    <right>
-      <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" fx:id="scoresList" />
    </right>
 </BorderPane>

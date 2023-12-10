@@ -67,6 +67,9 @@ public class GameController {
             BorderPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
+
+            MenuController mc = fxmlLoader.getController();
+            mc.load();
         }
         catch (IOException e) {
             e.printStackTrace();

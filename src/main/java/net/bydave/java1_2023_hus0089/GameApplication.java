@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class GameApplication extends Application {
 
-    private GameController controller;
+    private MenuController controller;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("menu-view.fxml"));
@@ -21,12 +21,8 @@ public class GameApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
-        /*
         controller = fxmlLoader.getController();
-        controller.startGame();
-        scene.setOnKeyPressed(controller::notifyKeyPressed);
-        scene.setOnKeyReleased(controller::notifyKeyPressed);
-         */
+        controller.load();
     }
 
     public static void main(String[] args) {
