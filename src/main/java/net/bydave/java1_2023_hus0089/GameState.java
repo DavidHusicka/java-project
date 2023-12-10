@@ -1,6 +1,7 @@
 package net.bydave.java1_2023_hus0089;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,16 +24,56 @@ public class GameState {
     public boolean isShiftDown = false;
     public boolean isFireDown = false;
     public boolean isBombDown = false;
+    private int score = 0;
+    private int bombs = 5;
+    private int lives = 3;
 
     int tickCounter = 1;
+    int lastBomb = -1000;
 
-    private List<GameObject> objects = new LinkedList<>();
+    private final List<GameObject> objects = new LinkedList<>();
 
-    GameState() {
+    private final GameStateChangedListener listener;
+
+    GameState(GameStateChangedListener listener) {
         this.enemies.add(new Raccoon());
+        this.listener = listener;
+    }
+
+    public int getScore() {
+       return score;
+    }
+
+    public int getLives() {
+        return lives;
+    }
+
+    public int getBombs() {
+        return bombs;
+    }
+
+    public void setScore(int s) {
+        this.score = s;
+        this.listener.stateChanged(score, lives, bombs);
+    }
+
+    public void setLives(int s) {
+        this.lives=s;
+        this.listener.stateChanged(score, lives, bombs);
+        if (s >= 0) {
+            this.listener.gameEnded();
+        }
+    }
+
+    public void setBombs(int s) {
+        this.bombs = s;
+        this.listener.stateChanged(score, lives, bombs);
     }
 
     void update(long delta) {
+        if (lives <= 0) {
+            return;
+        }
         if (tickCounter % 250 == 0) {
             enemies.add(new Falcon());
         }
@@ -48,11 +89,23 @@ public class GameState {
         for (GameObject o : objects) {
             o.update(delta, this);
         }
+
+        if (isBombDown && tickCounter - lastBomb > 60 && bombs > 0) {
+            this.setBombs(bombs - 1);
+            this.isBombDown = false;
+            this.enemies.clear();
+            this.enemyBullets.clear();
+            this.lastBomb = tickCounter;
+        }
         tickCounter++;
     }
 
     // requires update first before calling draw
     void draw(GraphicsContext gc) {
+        if (this.tickCounter - lastBomb < 15 && lives > 0) {
+            gc.setFill(new Color(0,1,1,1));
+            gc.fillRect(0,0,sceneSizeX, sceneSizeY);
+        }
         for (GameObject o : objects) {
             o.draw(gc);
         }

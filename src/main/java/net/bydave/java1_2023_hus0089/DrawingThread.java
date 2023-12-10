@@ -12,13 +12,14 @@ import java.util.Vector;
 
 public class DrawingThread extends AnimationTimer {
 
-    private final GameState state = new GameState();
+    final private GameState state;
 
     private final Canvas canvas;
     private final GraphicsContext gc;
-    public DrawingThread(Canvas gameCanvas) {
+    public DrawingThread(Canvas gameCanvas, GameState state) {
         this.canvas = gameCanvas;
         this.gc = canvas.getGraphicsContext2D();
+        this.state = state;
     }
 
     @Override
@@ -38,62 +39,6 @@ public class DrawingThread extends AnimationTimer {
 
         state.update(l);
         state.draw(gc);
-    }
-
-
-    public void notifyKeyPressed(KeyEvent ev) {
-        //this.state.player.notifyKeyPressed(ev);
-        KeyCode code = ev.getCode();
-        if (ev.getEventType() == KeyEvent.KEY_PRESSED) {
-            switch (code) {
-                case RIGHT:
-                    state.isRightDown = true;
-                    break;
-                case LEFT:
-                    state.isLeftDown = true;
-                    break;
-                case UP:
-                    state.isUpDown = true;
-                    break;
-                case DOWN:
-                    state.isDownDown = true;
-                    break;
-                case SHIFT:
-                    state.isShiftDown = true;
-                    break;
-                case Z:
-                    state.isFireDown = true;
-                    break;
-                case X:
-                    state.isBombDown = true;
-                    break;
-            }
-        }
-        else {
-            switch (code) {
-                case RIGHT:
-                    state.isRightDown = false;
-                    break;
-                case LEFT:
-                    state.isLeftDown = false;
-                    break;
-                case UP:
-                    state.isUpDown = false;
-                    break;
-                case DOWN:
-                    state.isDownDown = false;
-                    break;
-                case SHIFT:
-                    state.isShiftDown = false;
-                    break;
-                case Z:
-                    state.isFireDown = false;
-                    break;
-                case X:
-                    state.isBombDown = false;
-                    break;
-            }
-        }
     }
 
 }

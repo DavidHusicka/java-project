@@ -17,6 +17,7 @@ public class Player implements GameObject {
 
     boolean isShiftDown = false;
     int tickCounter = 0;
+    int lastHit = -1000;
 
     float sizeX = 64;
     float sizeY = 64;
@@ -64,8 +65,11 @@ public class Player implements GameObject {
         collisionChecked.addAll(state.enemyBullets);
 
         for (GameObject o : collisionChecked) {
-            if (o.getColliderAsRectangle().intersects(this.getColliderAsRectangle())) {
-                System.out.println("got hit");
+            if (o.getColliderAsRectangle().intersects(this.getColliderAsRectangle()) && tickCounter - lastHit > 60) {
+                lastHit = tickCounter;
+                state.isBombDown = true;
+                state.setBombs(state.getBombs() + 1);
+                state.setLives(state.getLives() - 1);
             }
         }
 

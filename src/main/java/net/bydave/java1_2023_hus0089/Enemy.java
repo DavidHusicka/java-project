@@ -28,6 +28,7 @@ public class Enemy implements GameObject {
 
         for (GameObject o : state.playerBullets) {
             if (o.getColliderAsRectangle().intersects(this.getColliderAsRectangle())) {
+                state.setScore(state.getScore() + 100);
                 state.enemies.remove(this);
             }
         }
